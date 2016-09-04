@@ -1,0 +1,40 @@
+<div class='panel panel-primary'>
+	<div class="panel-heading">{{title}}</div>
+
+	<div class="panel-body">
+		
+		<div class="row">
+			<div class="col-md-1">Filter By : </div>
+			<div class="col-md-4">
+				<input type="text" class="form-control" />
+			</div>
+		</div>
+	
+		<div class="clear"></div>
+	
+		<div class="table-responsive">
+			<table class="table-bordered" width="100%" *ngIf="productList.length">
+				<thead>
+					<tr>
+						<td>ProductId</td>
+						<td>Name</td>
+						<td>Code</td>
+						<td>Price</td>
+						<td>Available</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="#product of productList">
+						<td>{{product.productId}}</td>
+						<td>{{product.name}}</td>
+						<td>{{product.code}}</td>
+						<td>{{product.price}}</td>
+						<td>{{product.available}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+</div>

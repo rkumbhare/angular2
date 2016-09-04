@@ -1,18 +1,14 @@
 import { Component } from 'angular2/core';
-import { Welcome } from './welcome'
+import { ProductListComponent } from './product-list.component'
 
 @Component({
 	selector: 'myapp',
-	directives: [Welcome],
-	template: '<welcome [msg]="msg" (onClick)="onclick($event)"></welcome>'
+	template: '<h1>{{msg}}</h1><product-list></product-list>',
+	directives: [ProductListComponent]
 })
 
 export class AppComponent{
 	constructor(){
-		this.msg = "Welcome to AngularJS - basic Component";
-	}
-	
-	onclick(event){
-		alert(event.msg);
+		this.msg = "Welcome to AngularJS App";
 	}
 }
