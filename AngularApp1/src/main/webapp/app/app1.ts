@@ -1,6 +1,7 @@
 //our root app component
 import {Component} from 'angular2/core';
 import {Hello} from './hello';
+import {bootstrap} from 'angular2/platform/browser';
 
 @Component({
   selector: 'my-app',
@@ -20,3 +21,6 @@ export class App {
   }
 }
 
+//main entry point
+bootstrap(App, [])
+  .catch(err => console.error(err));
