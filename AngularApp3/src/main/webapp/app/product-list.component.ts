@@ -1,8 +1,10 @@
 import { Component } from 'angular2/core';
+import { ProductFilterPipe } from './product-filter.pipe';
 
 @Component({
 	selector: 'product-list',
 	templateUrl: 'product-list.html',
+	pipes: [ProductFilterPipe]
 })
 
 export class ProductListComponent{
