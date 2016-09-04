@@ -1,14 +1,14 @@
 import { Component } from 'angular2/core';
 
-
 @Component({
 	selector: 'product-list',
-	templateUrl: 'product-list.html'
+	templateUrl: 'product-list.html',
 })
 
 export class ProductListComponent{
 	
 	productList: any[];
+	filterBy: string;
 	
 	constructor(){
 		this.title = "Product List";
@@ -28,6 +28,10 @@ export class ProductListComponent{
 			price: 50.00,
 			available: 5
 		}];
+	}
+	
+	filterList(): void{
+		console.log(this.filterBy);	
 	}
 	
 }
