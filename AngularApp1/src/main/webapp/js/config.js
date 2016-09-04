@@ -8,7 +8,8 @@ System.config({
 	// map tells the System loader where to look for things
 	map : {
 		app : "app",
-		app1 : "app"
+		app1 : "app",
+		page1: "app/page1"	
 	},
 	// packages defines our app package
 	packages : {
@@ -16,9 +17,9 @@ System.config({
 			main : 'main.ts',
 			defaultExtension : 'ts'
 		},
-		app1 : {
-			main : 'app1.ts',
-			defaultExtension : 'ts'
+		page1: {
+			main: 'main.ts',
+			defaultExtension: 'ts'
 		}
 	}
 });
