@@ -4,11 +4,13 @@
  import { Component } from 'angular2/core';
  import { Product } from './product';
  import { ProductFilterPipe } from './product-filter.pipe';
+ import { StarRatingComponent } from './star-rating.component';
  
  @Component({
  	selector: 'product-list',
  	templateUrl: 'product-list.html',
- 	pipes: [ProductFilterPipe]
+ 	pipes: [ProductFilterPipe],
+ 	directives: [StarRatingComponent]
  })
  
  export class ProductListComponent{
@@ -47,5 +49,9 @@
  				available: 20,
  				rating: 3.5
  			}];
+ 		},
+ 		
+ 		onRatingClick(event): void{
+ 			alert(event);
  		}
  }

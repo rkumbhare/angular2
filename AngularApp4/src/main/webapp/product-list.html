@@ -36,7 +36,10 @@
 						<td>{{product.description}}</td>
 						<td>{{product.price | currency:'INR':true:'1.2-2'}}</td>
 						<td>{{product.available}}</td>
-						<td>{{product.rating}}</td>
+						<td>
+							<star-rating [rating]="product.rating" (notify)="onRatingClick($event)">
+							</star-rating>
+						</td>
 					</tr>
 				</tbody>
 			</table>
