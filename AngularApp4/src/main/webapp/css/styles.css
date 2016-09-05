@@ -303,6 +303,9 @@ span.icon{
 	padding: 10px 0px;
 }
 
+table.table-bordered{
+	width: 100% !important;
+}
 table.table-bordered tbody td, table.table-bordered thead td{
 	padding: 5px ;
 }
