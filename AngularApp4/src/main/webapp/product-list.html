@@ -29,7 +29,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr *ngFor="#product of productList">
+					<tr *ngFor="#product of productList | productFilter: filterBy">
 						<td>{{product.productId}}</td>
 						<td>{{product.productName}}</td>
 						<td>{{product.productCode | uppercase}}</td>
