@@ -1,46 +1,27 @@
-import { Component } from 'angular2/core';
+import { Component, Inject } from 'angular2/core';
 import { Product } from './Product';
 import { ProductFilterPipe } from './product-filter.pipe';
-
+import { ProductService } from './product.service';
+	
 @Component({
 	selector: 'product-list',
 	templateUrl: 'product-list.html',
 	pipes: [ProductFilterPipe]
 })
+
 export class ProductListComponent{
 	productList: Product[];
+	productService: ProductService;
 	title: string;
 	
-	constructor(){
-		this.title = "Product List";	
+	constructor(@Inject(ProductService) ps: ProductService){
+		this.title = "Product List";
+		this.productService = ps;
 	}
 	
 	ngOnInit(){
- 			this.productList = [{
- 				productId: 1001,
- 				productName: 'Dettol Soap',
- 				productCode: 'PROD1001',
- 				description: 'dettol soap',
- 				price: 25.00,
- 				available: 50,
- 				rating: 5
- 			},{
- 				productId: 1002,
- 				productName: 'Dabur Hair Oil',
- 				productCode: 'PROD1002',
- 				description: 'natural hail oil by dabur',
- 				price: 50.00,
- 				available: 10,
- 				rating: 4
- 			},{
- 				productId: 1003,
- 				productName: 'Lifeboy Soap',
- 				productCode: 'PROD1003',
- 				description: 'lifeboy soap kare kitanu ka naash',
- 				price: 18.50,
- 				available: 20,
- 				rating: 3.5
- 			}];
- 		}
+ 		console.log("Init - product-list.component");	
+ 		this.productList = this.productService.getProducts();	
+ 	}
 	
 }
