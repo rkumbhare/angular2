@@ -1,7 +1,9 @@
 /**
  * Product Service with product data and logic
  */
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable, OnInit, Inject } from '@angular/core';
+import {Http} from '@angular/http';
+
 import { Product } from './Product';
 
 @Injectable()
@@ -9,7 +11,7 @@ export class ProductService {
 
     productList: Product[];
 
-    constructor() {
+    constructor( @Inject(Http) http: Http) {
         this.productList = [{
             productId: 1001,
             productName: 'Dettol Soap',

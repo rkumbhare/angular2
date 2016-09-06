@@ -1,22 +1,13 @@
-/**
- * ProductFilterPipe for filtering the productList
- */
+import { Pipe, PipeTransform } from '@angular/core';
 
-import {Pipe, PipeTransform} from '@angular/core';
-
-@Pipe({
-    name: ' productFilter'
-})
-
+@Pipe({ name: 'productFilter' })
 export class ProductFilterPipe implements PipeTransform {
-
-    ransform(value: Product[], args: string[]): Product[] {
-        let filterBy = args[0] ? args[0].toLocaleLowerCase() : null;
-        if (filterBy) {
-            return value.filter((product: Product) => product.productName.toLocaleLowerCase().indexOf(filterBy) != -1);
+    transform(value: any[], arg: string): any[] {
+        console.log("ProductFilterPipe is executing " + arg);
+        if (arg) {
+            arg = arg.toLocaleLowerCase();
+            return value.filter((product: any) => product.productName.toLocaleLowerCase().indexOf(arg) != -1);
         }
-        else {
-            return value;
-        }
+        return value;
     }
 }

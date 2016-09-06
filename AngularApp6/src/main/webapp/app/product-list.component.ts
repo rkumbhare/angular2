@@ -16,7 +16,6 @@ export class ProductListComponent {
     constructor( @Inject(ProductService) ps: ProductService) {
         this.title = "Product List";
         this.productService = ps;
-        this.filterBy = "ksdjlf";
     }
 
     ngOnInit() {
