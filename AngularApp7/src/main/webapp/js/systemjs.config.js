@@ -8,7 +8,7 @@ System.config({
 			
 			paths : {
 				// paths serve as alias
-				'npm:' : 'https://unpkg.com/'
+				'npm:' : 'node_modules'
 			},
 			
 			// map tells the System loader where to look for things
@@ -17,19 +17,19 @@ System.config({
 				app : 'app',
 
 				// angular bundles
-				'@angular/core' : 'npm:@angular/core/bundles/core.umd.js',
-				'@angular/common' : 'npm:@angular/common/bundles/common.umd.js',
-				'@angular/compiler' : 'npm:@angular/compiler/bundles/compiler.umd.js',
-				'@angular/platform-browser' : 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
-				'@angular/platform-browser-dynamic' : 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
-				'@angular/http' : 'npm:@angular/http/bundles/http.umd.js',
-				'@angular/router' : 'npm:@angular/router/bundles/router.umd.js',
-				'@angular/forms' : 'npm:@angular/forms/bundles/forms.umd.js',
+				'@angular/core' : 'node_modules/@angular/core/bundles/core.umd.js',
+				'@angular/common' : 'node_modules/@angular/common/bundles/common.umd.js',
+				'@angular/compiler' : 'node_modules/@angular/compiler/bundles/compiler.umd.js',
+				'@angular/platform-browser' : 'node_modules/@angular/platform-browser/bundles/platform-browser.umd.js',
+				'@angular/platform-browser-dynamic' : 'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+				'@angular/http' : 'node_modules/@angular/http/bundles/http.umd.js',
+				'@angular/router' : 'node_modules/@angular/router/bundles/router.umd.js',
+				'@angular/forms' : 'node_modules/@angular/forms/bundles/forms.umd.js',
 				// other libraries
-				'rxjs' : 'npm:rxjs',
-				'angular2-in-memory-web-api' : 'npm:angular2-in-memory-web-api',
-				'ts' : 'npm:plugin-typescript@4.0.10/lib/plugin.js',
-				'typescript' : 'npm:typescript@1.9.0-dev.20160409/lib/typescript.js',
+				'rxjs' : 'https://unpkg.com/rxjs',
+				//'angular2-in-memory-web-api' : 'node_modules/angular2-in-memory-web-api/',
+				'ts' : 'node_modules/plugin-typescript/lib/plugin.js',
+				'typescript' : 'node_modules/typescript/lib/typescript.js',
 			},
 
 			// app packages
