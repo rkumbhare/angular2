@@ -5,12 +5,20 @@ System.config({
 
 	// typescript options
 	typescriptOption : {
-		emitDecoratorMetadata : true
+		"target" : "es5",
+		"module" : "system",
+		"declaration" : false,
+		"noImplicitAny" : false,
+		"removeComments" : true,
+		"noLib" : false,
+		"emitDecoratorMetadata" : true,
+		"experimentalDecorators" : true,
+		"sourceMap" : true
 	},
 
 	// mapping for packages, components
 	map : {
-		app : 'app'
+		app : 'app',
 	},
 
 	// app packages
@@ -18,7 +26,7 @@ System.config({
 		app : {
 			main : 'main.ts',
 			defaultExtension : 'ts'
-		}
+		},
 	}
 
 });

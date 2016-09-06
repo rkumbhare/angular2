@@ -1,7 +1,7 @@
 /**
  * Product Service with product data and logic
  */
-import { Injectable, OnInit } from 'angular2/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Product } from './Product';
 
 @Injectable()
