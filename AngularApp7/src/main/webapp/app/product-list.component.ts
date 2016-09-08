@@ -9,18 +9,22 @@ import { ProductService } from './product.service';
 
 export class ProductListComponent {
     productList: Product[];
-    productService: ProductService;
     title: string;
    	filterBy: string;
 
-    constructor( @Inject(ProductService) ps: ProductService) {
+    constructor( @Inject(ProductService) public productService: ProductService) {
         this.title = "Product List";
-        this.productService = ps;
     }
 
     ngOnInit() {
         console.log("Init - product-list.component");
-        this.productList = this.productService.getProducts();
+        this.productService.getProducts()
+        .subscribe(
+        	products => { this.productList = products},
+        	error => { console.error(error)},
+        	() => {}
+        );
+        				
     }
 
 }
