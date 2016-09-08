@@ -5,8 +5,6 @@
 
 	<div class="panel-body">
 		
-		<a routerLink="/product/new">link</a>
-	
 		<div class="row">
 			<div class="col-md-1">Filter By :</div>
 			<div class="col-md-4">
@@ -37,7 +35,9 @@
 						<td>{{product.description}}</td>
 						<td>{{product.price | currency:'INR':true:'1.2-2'}}</td>
 						<td>{{product.available}}</td>
-						<td>{{product.rating}}</td>
+						<td>
+							<star-rating [rating]='product.rating'></star-rating>
+						</td>
 					</tr>
 				</tbody>
 			</table>

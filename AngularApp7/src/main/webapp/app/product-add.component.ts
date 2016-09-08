@@ -7,7 +7,7 @@
  
  @Component({
  	selector: 'product-add',
- 	templateUrl: 'product-add.html';
+ 	templateUrl: 'app/product-add.html';
  })
  
  export class ProductAddComponent{

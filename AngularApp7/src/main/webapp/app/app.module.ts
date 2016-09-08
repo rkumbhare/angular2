@@ -8,7 +8,8 @@ import {ProductListComponent} from './product-list.component';
 import {ProductAddComponent} from './product-add.component';
 import { ProductFilterPipe } from './product-filter.pipe';
 import { ProductService } from './product.service';
-import { routing, appRouteProviders } from './app.routes';
+import {routing, appRouteProviders} from './app.routes';
+import {StarRatingComponent} from './star-rating.component';
 
 @NgModule({
     imports: [
@@ -21,6 +22,7 @@ import { routing, appRouteProviders } from './app.routes';
     			AppComponent, 
     			ProductListComponent, 
     			ProductAddComponent,
+    			StarRatingComponent,
     			ProductFilterPipe
     		 ],
     providers: [

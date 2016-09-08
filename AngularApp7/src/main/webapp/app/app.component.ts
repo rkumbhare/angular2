@@ -7,16 +7,7 @@ import { Component, Inject } from '@angular/core';
 
 @Component({
     selector: 'myapp',
-    template: '<h2>{{title}}</h2>' +
-				'<h4>{{subtitle}}</h4>' +
-				'<nav>' + 	
-					 '<a routerLink="/product/list">Product List</a>' +
-					 '<a routerLink="/product/new">New Product</a>' +
-				'</nav>' +
-				'<div class="clear"></div>' +
-				'<router-outlet></router-outlet>'
-					
-					
+    templateUrl: 'app/app.component.html'
 })
 
 export class AppComponent {

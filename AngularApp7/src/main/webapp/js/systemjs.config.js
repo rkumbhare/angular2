@@ -36,7 +36,7 @@ System.config({
 			packages : {
 				app : {
 					main : './main.ts',
-					defaultExtension : 'ts'
+					defaultExtension : 'ts',
 				},
 				'rxjs': {defaultExtension: 'js'}
 			}

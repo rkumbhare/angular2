@@ -4,7 +4,7 @@ import { ProductService } from './product.service';
 
 @Component({
     selector: 'product-list',
-    templateUrl: 'product-list.html',
+    templateUrl: 'app/product-list.html',
 })
 
 export class ProductListComponent {
