@@ -4,9 +4,9 @@
 <title>Angular2App</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<script src="js/plugins/jquery.min.js"></script>
-<script src="js/plugins/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 <!-- Polyfill(s) for older browsers -->
@@ -23,7 +23,7 @@
 	<myapp>Loading....</myapp>
 	
 	<!-- 2. Configure SystemJS -->
-	<script src="js/systemjs.config.js"></script>
+	<script src="systemjs.config.js"></script>
 	<script>
       System.import('app').catch(console.error.bind(console));
 	</script>
