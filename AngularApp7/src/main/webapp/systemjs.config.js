@@ -27,8 +27,8 @@ System.config({
 				'@angular/forms' : 'node_modules/@angular/forms/bundles/forms.umd.js',
 				// other libraries
 				'rxjs' : 'node_modules/rxjs',
-				//'angular2-in-memory-web-api' : 'node_modules/angular2-in-memory-web-api/',
-				'ts' : 'node_modules/plugin-typescript/lib/plugin.js',
+				'angular2-in-memory-web-api' : 'node_modules/angular2-in-memory-web-api',
+				//'ts' : 'node_modules/plugin-typescript/lib/plugin.js',
 				'typescript' : 'node_modules/typescript/lib/typescript.js',
 			},
 
@@ -38,6 +38,12 @@ System.config({
 					main : './main.ts',
 					defaultExtension : 'ts',
 				},
-				'rxjs': {defaultExtension: 'js'}
+				'rxjs': {
+					defaultExtension: 'js'
+				},
+				'angular2-in-memory-web-api': {
+			        main: './index.js',
+			        defaultExtension: 'js'
+			    }
 			}
 		});

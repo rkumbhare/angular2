@@ -8,27 +8,29 @@ import {ProductListComponent} from './product-list.component';
 import {ProductAddComponent} from './product-add.component';
 import { ProductFilterPipe } from './product-filter.pipe';
 import { ProductService } from './product.service';
-import {routing, appRouteProviders} from './app.routes';
 import {StarRatingComponent} from './star-rating.component';
+import {routing, appRouteProviders} from './app.routes';
+import {ProductSearchComponent} from './product-search.component';
 
 @NgModule({
     imports: [
     			BrowserModule, 
     			FormsModule, 
     			HttpModule, 
-    			routing
+    			routing,
     		 ],
     declarations: [
     			AppComponent, 
     			ProductListComponent, 
     			ProductAddComponent,
     			StarRatingComponent,
+    			ProductSearchComponent,
     			ProductFilterPipe
     		 ],
     providers: [
     			ProductService, 
-    			appRouteProviders
-    			],
+    			appRouteProviders	
+    		],
     bootstrap: [AppComponent]
 })
 
