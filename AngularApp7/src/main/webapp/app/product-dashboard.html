@@ -1,0 +1,53 @@
+<span *ngFor="let dashboardRow of productList | dashboardRowList:3">
+        
+        <div class="row">
+            
+            <span *ngFor="let product of dashboardRow.productList">
+                
+                <div class="col-sm-4 col-md-4">
+                 
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <a (click)="openProductInfoModel(product)" data-toggle="modal" data-keyboard="false" data-backdrop="static" data-target="#myModal">{{product.productName}}</a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-6 col-md-6">Code</div>
+                                <div class="col-xs-6 col-md-6">{{product.productCode}}</div>
+                            </div>
+                            <div [style.padding.px]="2"></div>
+                            <div class="row">
+                                <div class="col-xs-6 col-md-6">Description</div>
+                                <div class="col-xs-6 col-md-6">{{product.description}}</div>
+                            </div>
+                            <div [style.padding.px]="2"></div>
+                             <div class="row">
+                                <div class="col-xs-6 col-md-6">Price</div>
+                                <div class="col-xs-6 col-md-6">{{product.price | currency:'INR':true:'1.2-2'}}</div>
+                            </div>
+                            <div [style.padding.px]="2"></div>
+                            <div class="row">
+                                <div class="col-xs-6 col-md-6">Available</div>
+                                <div class="col-xs-6 col-md-6">{{product.available}}</div>
+                            </div>
+                            <div [style.padding.px]="2"></div>
+                            <div class="row">
+                                <div class="col-xs-6 col-md-6">Rating</div>
+                                <div class="col-xs-6 col-md-6">
+                                    <star-rating [rating]="product.rating"></star-rating>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </span>
+
+        </div>
+
+</span> 
+
+
+<product-info-model [product]="selectedProduct" (closeModel)="closeProductInfoModel($event)">
+</product-info-model>

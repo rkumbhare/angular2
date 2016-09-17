@@ -1,0 +1,9 @@
+
+.panel .panel-body{
+    font-size: 13px !important;
+}
+
+.panel .panel-heading a{
+    color: white;
+    text-decoration: none;
+}

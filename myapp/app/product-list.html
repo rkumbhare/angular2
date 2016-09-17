@@ -1,0 +1,47 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<strong>{{title}}</strong>
+	</div>
+
+	<div class="panel-body">
+		
+		<div class="row">
+			<div class="col-md-1">Filter By :</div>
+			<div class="col-md-4">
+				<input type="text" class="form-control" [(ngModel)]='filterBy' />
+			</div>
+		</div>
+		
+		<div class="clear"></div>
+
+		<div class="table-responsive">
+			<table class="table-bordered">
+				<thead>
+					<tr>
+						<td>ProductId</td>
+						<td>ProductName</td>
+						<td>ProductCode</td>
+						<td>Description</td>
+						<td>Price</td>
+						<td>Available</td>
+						<td>Rating</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let product of productList | productFilter:filterBy">
+						<td>{{product.productId}}</td>
+						<td>{{product.productName}}</td>
+						<td>{{product.productCode | uppercase}}</td>
+						<td>{{product.description}}</td>
+						<td>{{product.price | currency:'INR':true:'1.2-2'}}</td>
+						<td>{{product.available}}</td>
+						<td>
+							<star-rating [rating]='product.rating'></star-rating>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</div>

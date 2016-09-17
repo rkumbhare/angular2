@@ -262,11 +262,11 @@ div.section70 {
 
 
 table.table {
-	border: none;
+	*border: none;
 }
 
 table.table tr, table.table td {
-	border: none !important;
+	*border: none !important;
 }
 
 table.dtable {
@@ -315,6 +315,9 @@ table.table-bordered tbody td, table.table-bordered thead td{
 	padding: 5px ;
 }
 table.table-bordered thead td{
+	font-weight: bold !important;
+}
+table.table-striped thead td{
 	font-weight: bold !important;
 }
 

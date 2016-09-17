@@ -1,0 +1,59 @@
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog" *ngIf="product">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" (click)="onCloseModel()" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">{{product.productName}}</h4>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-sm-6 col-md-6"><strong>Product Id</strong></div>
+              <div class="col-sm-6 col-md-6">{{product.productId}}</div>
+          </div>
+          <div class="clear"></div>
+          <div class="row">
+              <div class="col-sm-6 col-md-6"><strong>Product Code</strong></div>
+              <div class="col-sm-6 col-md-6">{{product.productCode}}</div>
+          </div>
+          <div class="clear"></div>
+          <div class="row">
+              <div class="col-sm-6 col-md-6"><strong>Product Name</strong></div>
+              <div class="col-sm-6 col-md-6">{{product.productName}}</div>
+          </div>
+          <div class="clear"></div>
+          <div class="row">
+              <div class="col-sm-6 col-md-6"><strong>Description</strong></div>
+              <div class="col-sm-6 col-md-6">{{product.description}}</div>
+          </div>
+          <div class="clear"></div>
+            <div class="row">
+              <div class="col-sm-6 col-md-6"><strong>Price</strong></div>
+              <div class="col-sm-6 col-md-6">{{product.price | currency:'INR':true:'1.2-2'}}</div>
+          </div>
+          <div class="clear"></div>
+          <div class="row">
+              <div class="col-sm-6 col-md-6"><strong>Available</strong></div>
+              <div class="col-sm-6 col-md-6">{{product.available}}</div>
+          </div>
+         <div class="clear"></div>
+          <div class="row">
+              <div class="col-sm-6 col-md-6"><strong>Rating</strong></div>
+              <div class="col-sm-6 col-md-6">
+                  <star-rating [rating]="product.rating"></star-rating>
+              </div>
+          </div>
+          <div class="clear"></div>
+      </div>
+     
+     <!--
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="onCloseModel()" data-dismiss="modal">Close</button>
+      </div>
+    -->
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">{{title}}</div>
+
+	<div class="panel-body">
+		<form [formGroup]="productEditForm" (submit)="updateProduct()" novalidate>
+			<div class="row">
+				<div class="col-md-3">Product Name</div>
+				<div class="col-md-3">
+					<input type="text" class="form-control" [(ngModel)]="product.productName"
+						formControlName="productName" />
+					<control-messages [control]="productEditForm.controls.productName"></control-messages>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="row">
+				<div class="col-md-3">Description</div>
+				<div class="col-md-3">
+					<input type="text" class="form-control" [(ngModel)]="product.description"
+						formControlName="description" />
+					<control-messages [control]="productEditForm.controls.description"></control-messages>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="row">
+				<div class="col-md-3">Price</div>
+				<div class="col-md-3">
+					<input type="text" class="form-control" formControlName="price" [(ngModel)]="product.price" />
+					<control-messages [control]="productEditForm.controls.price"></control-messages>
+				</div>
+			</div>
+
+			<div class='clear'></div>
+
+			<div class="row">
+				<div class="col-md-3">Available</div>
+				<div class="col-md-3">
+					<input type="text" class="form-control" formControlName="available"
+						[(ngModel)]="product.available" />
+					<control-messages [control]="productEditForm.controls.available"></control-messages>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="row">
+				<div class="col-md-3">Rating</div>
+				<div class="col-md-3">
+					<select class='form-control' [(ngModel)]="product.rating" formControlName="rating">
+						<option *ngFor="let val of ratings" [value]="val">{{val}}</option>
+					</select>
+					<control-messages [control]="productEditForm.controls.rating"></control-messages>
+				</div>
+			</div>
+
+
+			<div class="clear"></div>
+			<div class="clear"></div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<button type="reset" class="btn btn-primary">Reset</button>
+					<button type="submit" class="btn btn-primary" [disabled]="!productEditForm.valid">Submit</button>
+				</div>
+			</div>
+
+		</form>
+
+	</div>
+</div>

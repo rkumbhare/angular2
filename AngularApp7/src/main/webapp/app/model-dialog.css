@@ -1,0 +1,28 @@
+
+.modal-content{
+    border-color:  #337ab7;
+}
+
+.modal-header{
+    padding: 5px 15px;
+    background:  #337ab7;
+    color: #fff;
+}
+
+.modal-header h4.modal-title{
+    font-size: 14px;
+}
+
+.modal-header button.close{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: -2px !important;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.modal-header:before .modal-header:after{
+    content: none !important;
+}
+
+

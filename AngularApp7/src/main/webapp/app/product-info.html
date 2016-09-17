@@ -1,0 +1,44 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<span>Product Info : {{product.productName | uppercase}}</span> <span class='float-right'>
+			<button (click)="close()">close</button>
+		</span>
+	</div>
+
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-xs-2 col-md-2"><strong>ProductId</strong></div>
+			<div class="col-xs-3 col-md-3">{{product.productId}}</div>
+			<div class="col-xs-2 col-md-2"><strong>ProductCode</strong></div>
+			<div class="col-xs-3 col-md-3">{{product.productCode}}</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="row">
+			<div class="col-xs-2 col-md-2"><strong>Name</strong></div>
+			<div class="col-xs-3 col-md-3">{{product.productName}}</div>
+			<div class="col-xs-2 col-md-2"><strong>Description</strong></div>
+			<div class="col-xs-3 col-md-3">{{product.description}}</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="row">
+			<div class="col-xs-2 col-md-2"><strong>Price</strong></div>
+			<div class="col-xs-3 col-md-3">{{product.price | currency:'INR':true:'1.2-2'}}</div>
+			<div class="col-xs-2 col-md-2"><strong>Available</strong></div>
+			<div class="col-xs-3 col-md-3">{{product.available}}</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="row">
+			<div class="col-xs-2 col-md-2"><strong>Rating</strong></div>
+			<div class="col-xs-3 col-md-3">
+				<star-rating [rating]="product.rating"></star-rating>
+			</div>
+		</div>
+	</div>
+	
+</div>

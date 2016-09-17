@@ -21,5 +21,6 @@
 	<mvc:resources location="/systemjs.config.js" mapping="/systemjs.config.js"></mvc:resources>
 	<mvc:resources location="/tsconfig.json" mapping="/tsconfig.json"></mvc:resources>
 	<mvc:resources location="/index.html" mapping="/index.html"></mvc:resources>
+	<mvc:resources location="/animation" mapping="/animation/**"></mvc:resources>
 	
 </beans>

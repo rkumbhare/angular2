@@ -1,0 +1,23 @@
+
+.modal-content{
+    border-color:  #337ab7;
+}
+
+.modal-header{
+    padding: 5px 15px;
+    background:  #337ab7;
+    color: #fff;
+}
+
+.modal-header button.close{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: -2px !important;
+    color: #fff;
+}
+
+.modal-header:before .modal-header:after{
+    content: none !important;
+}
+
+

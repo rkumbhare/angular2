@@ -11,6 +11,7 @@ export class ProductListComponent {
     productList: Product[];
     title: string;
    	filterBy: string;
+   	selectedProduct: Product;
 
     constructor( @Inject(ProductService) public productService: ProductService) {
         this.title = "Product List";
@@ -24,7 +25,16 @@ export class ProductListComponent {
         	error => { console.error(error)},
         	() => {}
         );
-        				
+    }
+    
+    selectProduct(product){
+    	this.selectedProduct = product;
+    	return false;
+    }
+    
+    closeSelectProductPanel(event){
+    	console.log(event);
+    	this.selectedProduct = undefined;
     }
 
 }

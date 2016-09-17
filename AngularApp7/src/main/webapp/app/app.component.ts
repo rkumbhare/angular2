@@ -16,8 +16,8 @@ export class AppComponent {
     subtitle: string;
 
     constructor() {
-        this.title = "Welcome to Angular2 Application Demo";
-        this.subtitle = "Service & Dependency Injection, HTTP Service";
+        this.title = "AngularJs 2 Application Demo";
+        this.subtitle = "Service & Dependency Injection, HTTP Service, Routing";
     }
 
 
