@@ -13,7 +13,7 @@
  
  @Component({
  	selector: 'product-add',
- 	templateUrl: 'app/product-add.html';
+ 	templateUrl: 'app/view/product-add.html';
  })
  
  export class ProductAddComponent{

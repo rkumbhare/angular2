@@ -8,7 +8,7 @@ import {ProductService} from './product.service';
  
  @Component({
  	selector: 'product-edit',
- 	templateUrl: 'app/product-edit.html'
+ 	templateUrl: 'app/view/product-edit.html'
  })
  
  export class ProductEditComponent{

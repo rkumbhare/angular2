@@ -6,8 +6,8 @@ import {ProductService} from './product.service';
 
 @Component({
     selector: 'product-dashboard',
-    templateUrl: 'app/product-dashboard.html',
-    styleUrls : ['app/product-dashboard.component.css']
+    templateUrl: 'app/view/product-dashboard.html',
+    styleUrls : ['app/view/product-dashboard.component.css']
 })
 
 export class ProductDashboardComponent{

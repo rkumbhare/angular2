@@ -6,7 +6,7 @@
  
  @Component({
  	selector: 'star-rating',
- 	templateUrl: 'app/star-rating.html'
+ 	templateUrl: 'app/view/star-rating.html'
  })
  export class StarRatingComponent{
  	

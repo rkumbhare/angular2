@@ -4,7 +4,7 @@ import {Product} from './Product';
 
 @Component({
 	selector: 'product-info',
-	templateUrl: 'app/product-info.html'
+	templateUrl: 'app/view/product-info.html'
 })
 export class ProductInfoComponent{
 	

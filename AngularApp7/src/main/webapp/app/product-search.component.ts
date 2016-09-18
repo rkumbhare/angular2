@@ -4,7 +4,7 @@ import {ProductService} from './product.service';
  
 @Component({
 	selector: 'product-search',
-	templateUrl: 'app/product-search.html'
+	templateUrl: 'app/view/product-search.html'
 })
 export class ProductSearchComponent{
 	

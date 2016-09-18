@@ -4,8 +4,8 @@ import {Product} from './Product';
 
 @Component({
     selector: 'product-info-model',
-    templateUrl: 'app/product-info-model.html',
-    styleUrls: ['app/model-dialog.css']
+    templateUrl: 'app/view/product-info-model.html',
+    styleUrls: ['app/view/model-dialog.css']
 })
 export class ProductInfoModelComponent{
 
