@@ -2,6 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Ng2BootstrapModule } from 'ng2-bootstrap';
 
 import { AppComponent }   from './app.component';
 import {ProductListComponent} from './product-list.component';
@@ -24,6 +25,7 @@ import {DashboardRowListPipe} from './dashboardRowList.pipe';
     			FormsModule, ReactiveFormsModule,
     			HttpModule, 
     			routing,
+    			Ng2BootstrapModule,
     		 ],
     declarations: [
     			AppComponent, 
