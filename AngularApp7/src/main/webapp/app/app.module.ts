@@ -39,11 +39,11 @@ import {DashboardRowListPipe} from './dashboardRowList.pipe';
     			ProductDashboardComponent,
     			ProductInfoModelComponent,
     			ProductFilterPipe,
-    			DashboardRowListPipe
+    			DashboardRowListPipe,
     		 ],
     providers: [
     			ProductService, 
-    			appRouteProviders	
+    			appRouteProviders,
     		],
     bootstrap: [AppComponent]
 })
