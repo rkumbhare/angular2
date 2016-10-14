@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var http_1 = require('@angular/http');
 var primeng_1 = require('primeng/primeng');
 var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
@@ -17,6 +18,7 @@ var app_routes_1 = require('./app.routes');
 var dashboard_component_1 = require('./dashboard/dashboard.component');
 var product_component_1 = require('./product/product.component');
 var user_component_1 = require('./user/user.component');
+var user_service_1 = require('./user/user.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,6 +29,7 @@ var AppModule = (function () {
                 forms_1.FormsModule, forms_1.ReactiveFormsModule,
                 primeng_1.CalendarModule, primeng_1.InputTextModule,
                 app_routes_1.routing,
+                http_1.HttpModule,
             ],
             declarations: [
                 app_component_1.AppComponent,
@@ -34,7 +37,9 @@ var AppModule = (function () {
                 product_component_1.ProductComponent,
                 user_component_1.UserComponent,
             ],
-            providers: [],
+            providers: [
+                user_service_1.UserService,
+            ],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

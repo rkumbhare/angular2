@@ -12,25 +12,30 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var core_1 = require('@angular/core');
-var user_service_1 = require('./user.service');
-var UserComponent = (function () {
-    function UserComponent(userService) {
-        this.userService = userService;
-        this.title = "Angular 2 Application - User";
+var http_1 = require('@angular/http');
+require('rxjs/Rx');
+var Observable_1 = require('rxjs/Observable');
+var UserService = (function () {
+    function UserService(http) {
+        this.http = http;
     }
-    UserComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.userService.get().subscribe(function (users) { _this.users = users; }, function (error) { console.error(error); }, function () { console.log(_this.users); });
+    UserService.prototype.get = function () {
+        console.log("Fetching all users");
+        return this.http.get("https://jsonplaceholder.typicode.com/users")
+            .map(function (response) { return response.json(); })
+            .do(function (data) { return console.log(data); })
+            .catch(this.errorHandler);
     };
-    UserComponent = __decorate([
-        core_1.Component({
-            selector: 'user',
-            templateUrl: 'app/user/view/user.html'
-        }),
-        __param(0, core_1.Inject(user_service_1.UserService)), 
-        __metadata('design:paramtypes', [user_service_1.UserService])
-    ], UserComponent);
-    return UserComponent;
+    UserService.prototype.errorHandler = function (error) {
+        console.error(error);
+        return Observable_1.Observable.throw(error);
+    };
+    UserService = __decorate([
+        core_1.Injectable(),
+        __param(0, core_1.Inject(http_1.Http)), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], UserService);
+    return UserService;
 }());
-exports.UserComponent = UserComponent;
-//# sourceMappingURL=user.component.js.map
+exports.UserService = UserService;
+//# sourceMappingURL=user.service.js.map

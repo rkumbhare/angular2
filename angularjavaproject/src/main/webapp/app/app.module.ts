@@ -9,6 +9,7 @@ import {routing} from './app.routes';
 import {DashboardComponent} from './dashboard/dashboard.component'; 
 import {ProductComponent} from './product/product.component';
 import {UserComponent} from './user/user.component';
+import {UserService} from './user/user.service';
 
 @NgModule({
     imports: [
@@ -16,6 +17,7 @@ import {UserComponent} from './user/user.component';
         FormsModule, ReactiveFormsModule, 
         CalendarModule, InputTextModule,
         routing,
+        HttpModule,
     ],
 
     declarations: [
@@ -26,7 +28,7 @@ import {UserComponent} from './user/user.component';
     ],
 
     providers: [
-
+        UserService,
     ],
      
     bootstrap: [AppComponent]
