@@ -5,47 +5,15 @@
 	<div class="panel-body">
 
 		<div class="row">
-			<div class="col-sm-6 col-md-6">
-				<input type="text" class='form-control' [(ngModel)]='query'
-					placeholder='Enter here to search product' (keyup)="searchProduct()" />
-			</div>
+
 			<div class="col-sm-6 col-md-6">
 				<input class="form-control" [(ngModel)]="productName" 
-						[typeahead]="productList"
-						[typeaheadOptionsLimit]="7" 
-						[typeaheadOptionField]="'productName'" 
-						[typeaheadMinLength]="3"
-						(onSelect)="onSelect($event)"  />
+					[typeahead]="productList"
+					[typeaheadOptionsLimit]="7" 
+					[typeaheadOptionField]="'productName'" 
+					[typeaheadMinLength]="3"
+					(onSelect)="onSelect($event)" />
 			</div>
-		</div>
-
-		<div class='clear'></div>
-
-		<div class="table-responsive" *ngIf="productList && productList.length">
-			<table class="table-bordered">
-				<thead>
-					<tr>
-						<td>ProductId</td>
-						<td>ProductName</td>
-						<td>ProductCode</td>
-						<td>Description</td>
-						<td>Price</td>
-						<td>Available</td>
-						<td>Rating</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr *ngFor="let product of productList">
-						<td>{{product.productId}}</td>
-						<td>{{product.productName}}</td>
-						<td>{{product.productCode}}</td>
-						<td>{{product.description}}</td>
-						<td>{{product.price}}</td>
-						<td>{{product.available}}</td>
-						<td>{{product.rating}}</td>
-					</tr>
-				</tbody>
-			</table>
 		</div>
 
 	</div>

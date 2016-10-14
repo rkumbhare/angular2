@@ -1,5 +1,4 @@
 "use strict";
-var router_1 = require('@angular/router');
 var product_list_component_1 = require('./product-list.component');
 var product_add_component_1 = require('./product-add.component');
 var product_search_component_1 = require('./product-search.component');
@@ -13,6 +12,7 @@ var appRoutes = [
     { path: 'product/search', component: product_search_component_1.ProductSearchComponent },
     { path: 'product/edit/:productId', component: product_edit_component_1.ProductEditComponent }];
 ;
-exports.appRouteProviders = [];
-exports.routing = router_1.RouterModule.forRoot(appRoutes);
+//export const appRouteProviders: any[] = [
+//];
+//export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes); 
 //# sourceMappingURL=app.routes.js.map
