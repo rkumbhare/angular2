@@ -1,0 +1,8 @@
+.ui-paginator {
+    text-align: right !important;
+    padding: 0px !important;
+}
+
+.ui-paginator.ui-widget-header{
+    border: 0px solid !important;
+}

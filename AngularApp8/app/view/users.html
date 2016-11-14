@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-3 col-md-3">
+                <input type="text" class="form-control" [(ngModel)]="searchCriteria.id" placeholder="user id"/>
+            </div>
+            <div class="col-sm-3 col-md-3">        
+                <input type="text" class="form-control" [(ngModel)]="searchCriteria.fname" placeholder="fname"/>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <select class="form-control" [(ngModel)]="searchCriteria.gender">
+                    <option value="" selected>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <button class="btn btn-primary" (click)="searchUser()">Search</button>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<datatable #userDatatable></datatable>

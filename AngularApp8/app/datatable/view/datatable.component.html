@@ -1,0 +1,45 @@
+
+<p-dataTable [value]="userList" [lazy]="true" 
+             [rows]="pageSize" 
+             (onSort)="onSort($event)"
+             [(selection)]="selectedUsers">
+    
+    <p-column [style]="{'width':'35px'}" selectionMode="multiple"></p-column>
+
+    <p-column field="id" header="Id" [sortable]="true"></p-column>
+    <p-column field="fname" header="FirstName" [sortable]="true"></p-column>
+    <p-column field="lname" header="LastName" [sortable]="true"></p-column>
+    <p-column field="age" header="Age" [sortable]="true"></p-column>
+    <p-column field="gender" header="Gender" [sortable]="true"></p-column>
+    <p-column>
+        <template let-col let-user="rowData" pTemplate type="body">
+            <a href="#{{user.id}}">Edit</a>
+            <a href="#{{user.id}}">Del</a>
+        </template>
+    </p-column>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+                    <div style="text-align:left; font-weight: normal;">Total Records #{{totalRecords}}</div>
+                </div>
+                <div class="col-sm-8 col-md-8">
+                    <p-paginator [rows]="5" [totalRecords]="totalRecords" 
+                             [pageLinkSize]="4" 
+                             (onPageChange)="onPage($event)">
+                    </p-paginator>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</p-dataTable>
+
+
+
+<div *ngIf="selectedUsers">
+    <div *ngFor="let user of selectedUsers">
+        {{user.id}}
+    </div>
+</div>
